@@ -1,0 +1,34 @@
+.custom-button {
+  .button {
+    outline: none !important;
+    border: none;
+    width: 100%;
+    background-color: #212844;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 12px 32px;
+
+    &:hover {
+      background-color: #212844;
+      color: white;
+      transition: 0.5s;
+    }
+  }
+
+  .button-invert {
+    background-color: white !important;
+    border: 1px solid #212844 !important;
+    color: #212844 !important;
+    font-weight: 400;
+    outline: none;
+  }
+  .button-invert:hover {
+    background-color: #212844 !important;
+    color: white !important;
+    transition: 0.5s;
+  }
+}

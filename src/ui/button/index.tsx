@@ -1,0 +1,34 @@
+import "./Button.scss";
+
+interface ButtonProps {
+  text: string;
+  className?: string;
+  onClick?: Function;
+  id?: string;
+  invertStyle?: boolean;
+  isLoading?: boolean;
+  disabled?:boolean;
+  type?:string;
+}
+
+const Button = (props: ButtonProps) => {
+  const { text, className, onClick, id, invertStyle, disabled } = props;
+  return (
+    <div className="custom-button">
+      <button
+        id={id}
+        className={`button ${invertStyle ? "button-invert" : ""} ${className}`}
+        onClick={() => {
+          // e.preventDefault();
+          onClick?.(id)
+        }}
+        disabled={disabled}
+        // type="submit"
+      >
+        {text }
+      </button>
+    </div>
+  );
+};
+
+export default Button;
